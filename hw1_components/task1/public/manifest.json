@@ -1,0 +1,10 @@
+{
+  "short_name": "Task 1",
+  "name": "Task 1 - Functional variant",
+  "icons": [
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

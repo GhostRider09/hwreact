@@ -1,0 +1,10 @@
+{
+  "short_name": "Task 2",
+  "name": "Task 2 - Class-based variant",
+  "icons": [
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
