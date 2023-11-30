@@ -1,0 +1,109 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 14px/20px "Lato", Arial, sans-serif;
+  padding: 0px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (hover: hover) {
+  button:hover {
+    cursor: pointer;
+  }
+}
+
+.container {
+  display: block;
+  margin: auto auto;
+  padding: 0;
+  width: 750px;
+  border-radius: 5px;
+}
+
+.__centered {
+  text-align: center;
+}
+
+.steps {
+  &__form {
+    padding: 0.5rem;
+  }
+}
+
+.form {
+  &__container {
+    display: flex;
+    gap: .5rem;
+    background: #eeeeee;
+    padding: 0.5rem;
+    border-radius: .25rem;
+  }
+  &__cols {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    &.__button {
+      flex: 0 0 auto;
+    }
+  }
+  &__label {
+    display: block;
+    padding-bottom: .25rem;
+  }
+  &__input {
+    padding: .25rem;
+    border: 2px solid #979797;
+    border-radius: .25rem;
+  }
+  &__button {
+    background: #fff;
+    border: 2px solid #979797;
+    border-radius: .25rem;
+    padding: .25rem 2rem;
+  }
+}
+
+.item-list {
+  &__container {
+    padding: 1.5rem .5rem;
+  }
+
+  &__table {
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+    thead td {
+      padding-bottom: 1rem;
+      color: #979797;
+      font-weight: 700;
+      font-size: 0.75rem;
+    }
+
+    td {
+      width: 42.5%;
+      font-size: 1.25rem;
+      padding: .75rem .5rem;
+
+      &.item-list__col-action {
+        width: 15%;
+      }
+    }
+
+    tbody > tr:nth-child(odd) {
+      background: #eee;
+    }
+  }
+}
