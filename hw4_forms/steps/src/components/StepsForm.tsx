@@ -9,24 +9,14 @@ export default function StepsForm({onChangeList}: {
     inputDistance: ""
   });
 
-  let stringToDate = (strDate: string): Date | null => {
-    let matches = strDate.match(/^(\d{2}).(\d{2}).(\d{4})$/);
-    
-    if ( matches ) {
-      let [_, d, m, Y] = matches;
-      return new Date(`${Y}-${m}-${d}`);
-    }
-
-    return null;
-  }
-
   let handlerAddItem = () => {
     if ( !parseFloat(form.inputDistance) ) {
       return false;
     }
 
-    let newId = stringToDate(form.inputDate);
-    if ( newId === null ) {
+    let newId = new Date(form.inputDate);
+    if ( !newId.getTime() ) {
+      alert("Invalid date!");
       return false;
     }
     
@@ -56,6 +46,11 @@ export default function StepsForm({onChangeList}: {
       
       return [...prev, item];
     });
+
+    setForm({  
+      inputDate: "",
+      inputDistance: ""
+    });
   }
 
   let handleChangeInput = ({target}:React.ChangeEvent<HTMLInputElement>) => {
@@ -71,7 +66,7 @@ export default function StepsForm({onChangeList}: {
             <label className='form__label' htmlFor="date">Дата (ДД.ММ.ГГГГ)</label>
             <input 
               className='form__input' 
-              type="tel" 
+              type="date" 
               id="date" 
               name="inputDate" 
               value={form.inputDate} 
@@ -81,7 +76,7 @@ export default function StepsForm({onChangeList}: {
             <label className='form__label' htmlFor="distance">Пройдено, км</label>
             <input 
               className='form__input' 
-              type="tel" 
+              type="number" 
               id="distance" 
               name="inputDistance" 
               value={form.inputDistance} 
