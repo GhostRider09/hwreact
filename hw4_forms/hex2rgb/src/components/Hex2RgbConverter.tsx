@@ -100,7 +100,8 @@ const Hex2RgbConverter = () => {
             id="color"
             name="inputColor"
             placeholder={state.inputColor}
-            onChange={onChangeColor} />
+            onChange={onChangeColor}
+            maxLength={7} />
           <label htmlFor="color"><span>{printHexAsRgb(state.inputColor)}</span></label>
         </div>
       </form>
