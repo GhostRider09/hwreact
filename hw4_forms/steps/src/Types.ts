@@ -12,9 +12,11 @@ export type TListItem = {
 export type TListItemProps = {
   item: TListItem
   onChangeList: React.Dispatch<React.SetStateAction<TListItem[]>>
+  onSetUpdate?: Function,
 }
 
 export type TStepsListProps = {
   list: TListItem[],
   onChangeList: React.Dispatch<React.SetStateAction<TListItem[]>>
+  onSetUpdate?: Function
 }

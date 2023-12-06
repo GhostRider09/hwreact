@@ -1,13 +1,19 @@
 import {TListItemProps} from '../Types.ts'
 import IconButton from './IconButton'
 
-export default function ListItem({item, onChangeList}: TListItemProps) {
+export default function ListItem({item, onSetUpdate, onChangeList}: TListItemProps) {
   const {id, date, distance} = item;
 
   let handlerRemoveRow = () => {
     onChangeList(prev => {
         return prev.filter(el => el.id !== id);
     });
+  }
+
+  let handlerEditRow = () => {
+    if ( typeof onSetUpdate !== "undefined" ) {
+      onSetUpdate(id);
+    }
   }
 
   let getPrintableDate = (date: string): string => {
@@ -34,7 +40,7 @@ export default function ListItem({item, onChangeList}: TListItemProps) {
       <td>{getPrintableDate(date)}</td>
       <td className='__centered'>{distance}</td>
       <td className='item-list__col-action __centered'>
-        {/* <IconButton icon="edit" onClick={handlerEditRow} /> */}
+        <IconButton icon="edit" onClick={handlerEditRow} />
         <IconButton icon="remove" onClick={handlerRemoveRow} />
       </td>
     </tr>

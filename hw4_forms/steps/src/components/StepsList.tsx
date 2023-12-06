@@ -1,7 +1,7 @@
 import {TStepsListProps} from '../Types.ts'
 import ListItem from './ListItem'
 
-export default function StepsList({list, onChangeList}: TStepsListProps) {
+export default function StepsList({list, onChangeList, onSetUpdate}: TStepsListProps) {
   list = list.sort((a, b) => {
     return a.id > b.id ? -1 : 1;
   });
@@ -21,7 +21,8 @@ export default function StepsList({list, onChangeList}: TStepsListProps) {
             <tbody>
               {list.map((row, idx) => <ListItem 
                 key={idx} 
-                item={row}  
+                item={row}
+                onSetUpdate={onSetUpdate}  
                 onChangeList={onChangeList} />
               )}
             </tbody>
