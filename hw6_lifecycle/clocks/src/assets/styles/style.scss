@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 14px/20px "Lato", Arial, sans-serif;
+  padding: 0px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (hover: hover) {
+  button:hover {
+    cursor: pointer;
+  }
+}
+
+.container {
+  display: block;
+  margin: auto auto;
+  padding: 0;
+  width: 750px;
+  border-radius: 5px;
+}
+
+.__centered {
+  text-align: center;
+}
+
+.steps {
+  &__form {
+    padding: 0.5rem;
+  }
+}
+
+.form {
+  &__container {
+    display: flex;
+    gap: .5rem;
+    background: #eeeeee;
+    padding: 0.5rem;
+    border-radius: .25rem;
+  }
+  &__cols {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    &.__button {
+      flex: 0 0 auto;
+    }
+  }
+  &__label {
+    display: block;
+    padding-bottom: .25rem;
+  }
+  &__input {
+    padding: .25rem;
+    border: 2px solid #979797;
+    border-radius: .25rem;
+  }
+  &__button {
+    background: #fff;
+    border: 2px solid #979797;
+    border-radius: .25rem;
+    padding: .25rem 2rem;
+  }
+}
+
+.clock-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
+  gap: 0.5rem;
+}
+
+.clock {
+  text-align: center;
+  position: relative;
+  flex: 0 1 45%;
+  padding: 2rem 1rem;
+  background-color: aqua;
+
+  &__title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  &__time {
+    font-size: 1.5rem;
+  }
+  &__remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
