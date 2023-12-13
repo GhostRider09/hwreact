@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul > li {
+  padding: .5rem;
+  border: 1px solid #ccc;
+}
+li:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+li.__selected {
+  background-color: #ccc;
+}
+.details {
+  padding-left: 3rem;
+}
