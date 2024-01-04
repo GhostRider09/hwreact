@@ -1,0 +1,24 @@
+form {
+  display: flex;
+  padding-bottom: 1rem;
+}
+
+.rows {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  /* list-style-position: inside; */
+}
+
+.rows li {
+  width: 30rem;
+  /* display: flex; */
+}
+
+.row {
+  display: flex;
+  border-bottom: 2px solid #979797;
+  padding: .5rem 0;
+}
+
+.row__title { padding-right: 1rem; }
+.row__price { padding-right: 1rem; }
